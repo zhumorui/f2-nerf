@@ -33,7 +33,7 @@ cd f2-nerf
 We take `torch-1.13.1+cu117` for example.
 ```shell
 cd External
-https://download.pytorch.org/libtorch/cu117/libtorch-cxx11-abi-shared-with-deps-1.13.1%2Bcu117.zip
+wget https://download.pytorch.org/libtorch/cu117/libtorch-cxx11-abi-shared-with-deps-1.13.1%2Bcu117.zip
 unzip ./libtorch-cxx11-abi-shared-with-deps-1.13.1%2Bcu117.zip
 ```
 
@@ -69,7 +69,7 @@ python scripts/inter_poses.py --data_dir ./data/example/ngp_fox --key_poses 5,10
 The file `poses_render.npy` in the data directory would be generated. Then run
 
 ```shell
-python scripts/run.py --config-name=wanjiyou dataset_name=example case_name=ngp_fox mode=render_path is_continue=true
+python scripts/run.py --config-name=wanjinyou dataset_name=example case_name=ngp_fox mode=render_path is_continue=true
 ```
 
 The synthesized images can be found in `./exp/ngp_fox/novel_images`.
